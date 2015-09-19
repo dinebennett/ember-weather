@@ -1,0 +1,21 @@
+<div class="col-md-3">
+    <div class="well current-weather-well">
+        <div class="text-center">
+
+            <h1 class="weather-icon">{{weather-icon iconClass}}</h1>
+            <h1>{{roundedTemp}} °C </h1>
+
+            <h3>{{name}} </h3>
+
+          {{#each weather}}
+              <h4>{{description}}</h4>
+          {{/each}}
+
+            <br/>
+            Wind Speed: {{wind.speed}} m/s <br/>
+            Humidity: {{main.humidity}} % <br/>
+            Cloud cover: {{clouds.all}}% <br/>
+
+        </div>
+    </div>
+</div>
