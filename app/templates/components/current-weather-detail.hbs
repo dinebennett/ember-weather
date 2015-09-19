@@ -5,8 +5,8 @@
             <h1 class="weather-icon-large pull-right">{{weather-icon iconClass}}</h1>
             <h1>{{model.name}} </h1>
             <h3>{{date}}</h3>
-          {{#each model.weather}}
-              <h4>{{description}}</h4>
+          {{#each model.weather as |w|}}
+              <h4>{{w.description}}</h4>
           {{/each}}
             <h1 class="enormous-text">{{roundedTemp}} °C </h1>
         </div>

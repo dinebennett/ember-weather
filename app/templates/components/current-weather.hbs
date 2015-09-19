@@ -6,8 +6,8 @@
             <h2>{{model.name}} </h2>
             <h1>{{roundedTemp}} °C </h1>
 
-          {{#each model.weather}}
-              <h4>{{description}}</h4>
+          {{#each model.weather as |w|}}
+              <h4>{{w.description}}</h4>
           {{/each}}
 
         </div>
