@@ -6,6 +6,13 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+    moment: {
+      // Options:
+      // 'all' - all years, all timezones
+      // '2010-2020' - 2010-2020, all timezones
+      // 'none' - no data, just timezone API
+      includeTimezone: 'all'
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -43,5 +50,11 @@ module.exports = function(environment) {
 
   }
 
+  ENV['ember-cli-map'] = {
+    googleApiKey: 'AIzaSyDQs9pZXr5vfv-lBwiviqF6T7vCBCAsuRQ'
+  };
+
   return ENV;
 };
+
+

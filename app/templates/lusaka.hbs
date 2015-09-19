@@ -1,0 +1,8 @@
+{{#unless model}}
+    Loading...
+{{/unless}}
+
+<br/>
+{{current-weather-detail model=model}}
+<br/>
+{{g-maps name="lusaka" lat=model.coord.lat lng=model.coord.lon zoom=11}}

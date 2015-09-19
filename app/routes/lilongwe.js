@@ -3,9 +3,13 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 
   model: function () {
-
-    return this.store.find('weather', {id: 3369157});
-
+    if (this.store.hasRecordForId('weather', 927967)) {
+      return this.store.peekRecord('weather', 927967);
+    } else {
+      return this.store.queryRecord('weather', {id: 927967, units: 'metric'}).then(function (data) {
+        return data;
+      });
+    }
   }
 
 });

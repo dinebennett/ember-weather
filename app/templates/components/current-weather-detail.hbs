@@ -1,21 +1,27 @@
-<div class="col-md-3">
-    <div class="well current-weather-well">
-        <div class="text-center">
+<div class="well current-weather-well">
+    <div class="row">
 
-            <h1 class="weather-icon">{{weather-icon iconClass}}</h1>
-            <h1>{{roundedTemp}} °C </h1>
-
-            <h3>{{name}} </h3>
-
-          {{#each weather}}
+        <div class="col-xs-6">
+            <h1 class="weather-icon-large pull-right">{{weather-icon iconClass}}</h1>
+            <h1>{{model.name}} </h1>
+            <h3>{{date}}</h3>
+          {{#each model.weather}}
               <h4>{{description}}</h4>
           {{/each}}
-
-            <br/>
-            Wind Speed: {{wind.speed}} m/s <br/>
-            Humidity: {{main.humidity}} % <br/>
-            Cloud cover: {{clouds.all}}% <br/>
-
+            <h1 class="enormous-text">{{roundedTemp}} °C </h1>
         </div>
+
+        <div class="col-xs-1"></div>
+
+        <div class="col-xs-5 bigger-text">
+            <br/>
+            Wind Speed: {{model.wind.speed}} m/s <br/>
+            Humidity: {{model.main.humidity}} % <br/>
+            Cloud cover: {{model.clouds.all}}% <br/>
+            Rainfall: {{rainfall}} mm <br/>
+            Sunrise: {{sunrise}} <br/>
+            Sunset: {{sunset}}
+        </div>
+
     </div>
 </div>

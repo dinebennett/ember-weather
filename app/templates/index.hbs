@@ -1,0 +1,32 @@
+<h1 class=text-center id="title">Welcome to Ember Weather</h1>
+<p class="text-center lead">This is a demo. Have fun!</p>
+
+<div class="text-center">
+    <button class="btn btn-primary btn-lg" {{action 'refresh'}}>Refresh Data</button>
+</div>
+
+<br/>
+
+{{#unless model}}
+    <h1>Loading...</h1>
+{{/unless}}
+
+<div class="row">
+
+  {{#each model.capetown as |m|}}
+    {{#link-to 'cape-town'}}{{current-weather model=m}}{{/link-to}}
+  {{/each}}
+
+  {{#each model.lusaka as |m|}}
+    {{#link-to 'lusaka'}}{{current-weather model=m}}{{/link-to}}
+  {{/each}}
+
+  {{#each model.lilongwe as |m|}}
+    {{#link-to 'lilongwe'}}{{current-weather model=m}}{{/link-to}}
+  {{/each}}
+
+  {{#each model.maputo as |m|}}
+    {{#link-to 'maputo'}}{{current-weather model=m}}{{/link-to}}
+  {{/each}}
+
+</div>

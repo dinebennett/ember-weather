@@ -1,0 +1,29 @@
+.ember-cli-g-map {
+  height: 300px;
+}
+
+.weather-icon {
+  color: #5bc0de;
+  font-size: 60px;
+}
+
+.weather-icon-large {
+  color: #5bc0de;
+  font-size: 90px;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.current-weather-well {
+  color: #333;
+}
+
+.bigger-text {
+  font-size: 18px;
+}
+
+.enormous-text {
+  font-size: 70px;
+}

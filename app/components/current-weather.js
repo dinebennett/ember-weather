@@ -1,13 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  url: function () {
-    return 'http://openweathermap.org/img/w/' + this.get('weather')[0].icon + '.png';
-  }.property('weather'),
   roundedTemp: function() {
-    return Math.floor(this.get('main.temp'));
-  }.property('main'),
+    return Math.floor(this.get('model.main.temp'));
+  }.property('model.main'),
   iconClass: function() {
-    return "owm-" + this.get('weather')[0].id;
-  }.property('weather')
+    if (Ember.isBlank(this.get('model.weather'))) {
+      return '';
+    } else {
+      return "owm-" + this.get('model.weather')[0].id;
+    }
+  }.property('model.weather')
 });

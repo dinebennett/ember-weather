@@ -6,6 +6,12 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+
+  this.route('cape-town');
+  this.route('lilongwe');
+  this.route('lusaka');
+  this.route('maputo');
+
 });
 
 export default Router;
